@@ -1,7 +1,9 @@
 package com.Bridgelabz.Address;
 
+import javax.lang.model.element.Name;
+
 public class Contacts {
-    private String name;
+    private static String name;
     private String address;
     private String city;
     private String state;
@@ -9,8 +11,8 @@ public class Contacts {
     private int phnNumber;
     private String eMail;
 
-    void contacts(String firstName, String lastName, String address, String city, String state, int zipcode, int phnNumber, String eMail) {
-        this.name = firstName;
+    void contacts(String name,  String address, String city, String state, int zipcode, int phnNumber, String eMail) {
+        this.name = name;
         this.address = address;
         this.city = city;
         this.state = state;
@@ -19,7 +21,7 @@ public class Contacts {
         this.eMail = eMail;
     }
 
-    public String getName() {
+    public static String getName() {
         return name;
     }
 

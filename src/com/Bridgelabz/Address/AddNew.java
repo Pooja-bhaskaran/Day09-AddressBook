@@ -42,4 +42,21 @@ public class AddNew {
             }
         }
     }
+
+    public void deleteContact() {
+
+        System.out.println("Enter the  name to search and delete: ");
+        String name = scanner.next();
+        for (int i = 0; i < list.size(); i++) {
+            if (name.equals(Contacts.getName())) {
+                list.remove(i);
+            }
+        }
+        System.out.println("Contacts after deletion");
+        if (list.isEmpty() != true) {
+            System.out.println(list);
+        } else {
+            System.out.println("Contacts deleted");
+        }
+    }
 }
