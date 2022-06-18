@@ -5,9 +5,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class AddNew {
- static Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
 
- public void addNewContact(){
+    ArrayList<Contacts> list = new ArrayList<>();
+
+    public void addNewContact() {
 
         System.out.println("Enter the full name : ");
         String name = scanner.next();
@@ -23,5 +25,21 @@ public class AddNew {
         String zipcode = scanner.next();
         System.out.println("Enter the phoneNumber : ");
         String phoneNumber = scanner.next();
+
+        Contacts contact = new Contacts();
+        System.out.println(list);
+        list.add(contact);
+
+    }
+
+    public void editContact(){
+        System.out.println("Enter the full name : ");
+        String name = scanner.next();
+
+        for (Contacts contact :list) {
+            if (contact.getName().equals(name)){
+
+            }
+        }
     }
 }

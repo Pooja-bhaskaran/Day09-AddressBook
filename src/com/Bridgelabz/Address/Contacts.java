@@ -1,8 +1,7 @@
 package com.Bridgelabz.Address;
 
 public class Contacts {
-    private String firstName;
-    private String lastName;
+    private String name;
     private String address;
     private String city;
     private String state;
@@ -10,9 +9,8 @@ public class Contacts {
     private int phnNumber;
     private String eMail;
 
-    void contacts(String firstName, String lastName, String address,String city, String state, int zipcode, int phnNumber, String eMail){
-        this.firstName = firstName;
-        this.lastName = lastName;
+    void contacts(String firstName, String lastName, String address, String city, String state, int zipcode, int phnNumber, String eMail) {
+        this.name = firstName;
         this.address = address;
         this.city = city;
         this.state = state;
@@ -21,17 +19,12 @@ public class Contacts {
         this.eMail = eMail;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-    public String getLastName() {
-        return lastName;
-    }
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+
+    public void setName(String firstName) {
+        this.name = firstName;
     }
 
     public String getAddress() {
@@ -82,4 +75,16 @@ public class Contacts {
         this.eMail = eMail;
     }
 
+
+    public String toString(){
+        return "Contacts{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zipcode + '\'' +
+                ", phoneNumber='" + phnNumber + '\'' +
+                ", email='" + eMail + '\'' +
+                '}';
+    }
 }
